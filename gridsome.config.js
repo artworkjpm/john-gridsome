@@ -18,8 +18,18 @@ module.exports = {
         //route: '/products/:productId'
       },
     },
+    {
+      use: '@gridsome/source-airtable',
+      options: {
+        apiKey: 'keyiNzI45iiMDdocR', // required
+        baseId: 'appRnERx3upItllB6', // required
+        tableName: 'Vendors', // required
+        typeName: 'Vendor', // required
+      },
+    },
   ],
   templates: {
+    //'Product': '/products/:productId'
     //YOUR_TYPE_NAME: 'YOUR_OPTIONAL_ROUTE', // optional
   },
 }
