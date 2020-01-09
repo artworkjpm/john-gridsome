@@ -19,8 +19,10 @@
           <tr v-for="item in $page.allClientOrder.edges" :key="item.node.id">
             <td>{{ item.node.name }}</td>
             <td style="white-space: nowrap;">{{ item.node.fulfillBy }}</td>
-            <td>{{ item.node.status }}</td>
-            <td>${{ item.node.totalOrderCost }}</td>
+            <td>
+              <div class="badge" :class="getClass(item.node.status)">{{ item.node.status }}</div>
+            </td>
+            <td>${{ item.node.totalOrderCost.toLocaleString() }}</td>
             <td>
               <div v-for="file in item.node.invoice" :key="file.id">
                 <p>{{ file.filename }}</p>
@@ -37,7 +39,21 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  methods: {
+    getClass(status) {
+      if (status === "Received") {
+        return "badge-success";
+      } else if (status === "Shipped") {
+        return "badge-info";
+      } else if (status === "Invoiced") {
+        return "badge-warning";
+      } else if (status === "Preparing") {
+        return "badge-primary";
+      }
+    }
+  }
+};
 </script>
 <page-query>
 query clientOrder {

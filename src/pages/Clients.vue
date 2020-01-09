@@ -9,7 +9,6 @@
           <tr>
             <th>Name</th>
             <th>Image</th>
-            <th>Orders</th>
             <th>Billing address</th>
           </tr>
         </thead>
@@ -17,9 +16,7 @@
           <tr v-for="item in $page.allClient.edges" :key="item.node.id">
             <td>{{ item.node.name }}</td>
             <td><g-image :src="item.node.photosOfSpace[0].thumbnails.large.url" style="max-width: 20rem;" /></td>
-            <td>Orders</td>
             <td>{{ item.node.billingAddress }}</td>
-            <td style="white-space: nowrap;"></td>
           </tr>
         </tbody>
       </table>
