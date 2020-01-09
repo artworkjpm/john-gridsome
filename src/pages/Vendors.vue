@@ -11,16 +11,17 @@
             <th>Name</th>
             <th>ID</th>
             <th>Vendor furniture</th>
-            <th>Phone</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="item in $page.allVendor.edges" :key="item.node.id">
-            <td><g-image :src="item.node.logo[0].thumbnails.small.url" /></td>
+            <td>
+              <g-image :src="item.node.logo[0].thumbnails.small.url" />
+              <div style="white-space: nowrap">Tel: {{ item.node.phoneNumber }}</div>
+            </td>
             <td>{{ item.node.name }}</td>
             <td>{{ item.node.id }}</td>
             <td><ProductCard :furniture="item.node.furniture" /></td>
-            <td style="white-space: nowrap;">{{ item.node.phoneNumber }}</td>
           </tr>
         </tbody>
       </table>

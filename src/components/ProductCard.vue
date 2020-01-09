@@ -42,3 +42,8 @@ query Product {
   }
 }
 </static-query>
+<style>
+/* .card-title {
+  font-size: 18px;
+} */
+</style>
