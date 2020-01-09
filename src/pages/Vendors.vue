@@ -3,35 +3,36 @@
     <div class="row">
       <Layout />
     </div>
-    <div class="col-6">
-      <b-table striped hover :items="$page.allVendor.edges"></b-table>
-      <table>
+    <div class="col">
+      <table class="table table-striped table-responsive">
         <thead>
           <tr>
+            <th>Logo</th>
             <th>Name</th>
             <th>ID</th>
+            <th>Furniture</th>
             <th>Phone</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="item in $page.allVendor.edges" :key="item.node.id">
-            <td></td>
+            <td><g-image :src="item.node.logo[0].thumbnails.small.url" /></td>
+            <td>{{ item.node.name }}</td>
+            <td>{{ item.node.id }}</td>
+            <td><ProductCard :furniture="item.node.furniture" /></td>
+            <td style="white-space: nowrap;">{{ item.node.phoneNumber }}</td>
           </tr>
         </tbody>
       </table>
-      <!-- <b-card-group columns>
-        <b-card v-for="edge in $page.allProduct.edges" :key="edge.node.images[0].id" :title="edge.node.name" :img-src="edge.node.images[0].url" img-alt="Image" img-top tag="article" style="max-width: 20rem;" class="mb-2">
-          <b-card-text>
-            {{ edge.node.designer }}
-          </b-card-text>
-
-        </b-card>
-      </b-card-group>
-      -->
     </div>
   </div>
 </template>
-
+<script>
+import ProductCard from "../components/ProductCard";
+export default {
+  components: { ProductCard }
+};
+</script>
 <page-query>
 query Vendor {
   allVendor{
@@ -42,8 +43,11 @@ query Vendor {
         phoneNumber,
         furniture,
         logo{
-          id,
-          url,
+            thumbnails{
+                small{
+                    url
+                }
+            }
         }
       }
     }

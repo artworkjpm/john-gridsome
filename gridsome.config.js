@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'John Gridsome Test',
+  siteName: 'John Gridsome-AirTable-GraphSQL',
   plugins: [
     {
       use: '@gridsome/source-airtable',
