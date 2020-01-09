@@ -8,6 +8,9 @@
   },
   "dependencies": {
     "@gridsome/source-airtable": "^0.1.4",
-    "gridsome": "^0.7.0"
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.2.0",
+    "gridsome": "^0.7.0",
+    "vue": "^2.6.11"
   }
 }

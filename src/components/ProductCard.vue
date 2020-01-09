@@ -1,0 +1,34 @@
+<template>
+  <div class="card">
+    {{ message }}
+    <button @click="onClick">
+      Change
+    </button>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    productID: String
+  },
+  name: "Card",
+  data() {
+    return {
+      message: "Try change me!"
+    };
+  },
+  methods: {
+    onClick() {
+      this.message = "Here you go :)";
+    }
+  }
+};
+</script>
+
+<style>
+.card {
+  padding: 20px;
+  background: #fff;
+}
+</style>

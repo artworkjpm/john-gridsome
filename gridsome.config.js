@@ -15,6 +15,7 @@ module.exports = {
         tableName: 'Furniture', // required
         typeName: 'Product', // required
         //select: {}, // optional
+        //route: '/products/:productId'
       },
     },
   ],
