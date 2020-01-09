@@ -1,14 +1,20 @@
 <template>
-  <div class="layout">
+  <div>
     <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/about/">About</g-link>
-        <g-link class="nav__link" to="/products/">Products</g-link>
-        <g-link class="nav__link" to="/vendors/">Vendors</g-link>
-      </nav>
+      <!--  <div>
+        <strong>
+          <g-link to="/">{{ $static.metadata.siteName }}</g-link>
+        </strong>
+      </div> -->
+      <div>
+        <b-nav class="ml-4" pills>
+          <b-nav-item to="/">{{ $static.metadata.siteName }}</b-nav-item>
+          <b-nav-item to="/about/">About</b-nav-item>
+          <b-nav-item to="/vendors/">Vendors</b-nav-item>
+          <b-nav-item to="/clients/">Clients</b-nav-item>
+          <b-nav-item to="/client-orders/">Client Orders</b-nav-item>
+        </b-nav>
+      </div>
     </header>
     <slot />
   </div>
@@ -28,6 +34,9 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
+}
+.router-link-active {
+  font-weight: bold;
 }
 
 .layout {

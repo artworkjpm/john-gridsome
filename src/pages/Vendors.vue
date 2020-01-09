@@ -10,7 +10,7 @@
             <th>Logo</th>
             <th>Name</th>
             <th>ID</th>
-            <th>Furniture</th>
+            <th>Vendor furniture</th>
             <th>Phone</th>
           </tr>
         </thead>

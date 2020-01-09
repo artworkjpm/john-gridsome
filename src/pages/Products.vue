@@ -33,9 +33,6 @@
               <b-card-text>
                 {{ edge.node.type }}
               </b-card-text>
-              <!-- <g-link :to="'products/' + edge.node.images[0].id"> Full Details</g-link> -->
-              <!-- <g-link class="link--red" to="/products">Events</g-link> -->
-              <!-- <router-link :to="{ name: 'product', params: { productId: edge.node.images[0].id } }">Details</router-link> -->
             </b-card>
           </div>
         </b-card-group>
