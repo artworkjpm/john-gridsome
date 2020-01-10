@@ -1,4 +1,4 @@
-Hosted here [a link ](https://jpm-gridsome.netlify.com/)
+### Hosted here [https://jpm-gridsome.netlify.com/](https://jpm-gridsome.netlify.com/)
 
 # Default starter for Gridsome
 
