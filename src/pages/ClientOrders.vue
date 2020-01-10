@@ -17,7 +17,10 @@
         </thead>
         <tbody>
           <tr v-for="item in $page.allClientOrder.edges" :key="item.node.id">
-            <td>{{ item.node.name }}</td>
+            <td>
+              {{ item.node.name }}
+              <p>ID: {{ item.node.id }}</p>
+            </td>
             <td style="white-space: nowrap;">{{ item.node.fulfillBy }}</td>
             <td>
               <div class="badge" :class="getClass(item.node.status)">{{ item.node.status }}</div>
