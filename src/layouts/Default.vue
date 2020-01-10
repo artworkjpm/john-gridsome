@@ -1,13 +1,13 @@
 <template>
   <div>
-    <header class="header">
+    <header class="header mt-4">
       <!--  <div>
         <strong>
           <g-link to="/">{{ $static.metadata.siteName }}</g-link>
         </strong>
       </div> -->
       <div>
-        <b-nav class="ml-4" pills>
+        <b-nav class="ml-4">
           <b-nav-item to="/">{{ $static.metadata.siteName }}</b-nav-item>
           <b-nav-item to="/about/">About</b-nav-item>
           <b-nav-item to="/vendors/">Vendors</b-nav-item>
